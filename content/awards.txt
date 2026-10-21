@@ -1,4 +1,5 @@
 # year | award
+2026 | NSF ACCESS allocation CIS262322, 750,000 ACCESS credits
 2026–27 | Informatics Department Dissertation Writing Fellowship, UC Irvine
 2025 | ICSE 2025 Distinguished Paper Award
 2025 | SIGSOFT CAPS Travel Award
