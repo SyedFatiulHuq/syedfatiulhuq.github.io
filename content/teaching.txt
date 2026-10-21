@@ -1,0 +1,4 @@
+# period | role | place | detail
+2024–26 | Guest Lecturer | UC Irvine | Five lectures on accessibility across INF 191 (Senior Design Project), ICS 4 (Designing Computing Technology for People) and INF 295 (Software Accessibility).
+2021–26 | Teaching Assistant | UC Irvine | INF 191, INF 117 (Project in Software System Design), INF 121 (Software Design), INF 113 (Software Requirements Analysis), INF 43 (Intro to Software Engineering).
+2019–20 | Instructor, Short Courses | University of Dhaka | Java and Android development.

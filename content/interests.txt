@@ -1,0 +1,5 @@
+# One interest per line
+Software engineering
+Human-computer interaction
+AI for SE
+Accessibility

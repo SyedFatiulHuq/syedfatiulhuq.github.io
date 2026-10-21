@@ -1,0 +1,1 @@
+My research asks how well automated accessibility tools represent what disabled people actually experience, and builds LLM-based techniques that scale their feedback. It follows four threads.

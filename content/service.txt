@@ -1,0 +1,4 @@
+# One item per line
+Reviewer: CHI, UIST, ICSA, TOCHI, MobileCHI
+Panelist: INF 232 (Research in HCI), Informatics Graduate Student Association: Journey to PhD Candidacy (2026); INF 131 (2025)
+Volunteering: ZotHacks, IrvineHacks, and several University of Dhaka events

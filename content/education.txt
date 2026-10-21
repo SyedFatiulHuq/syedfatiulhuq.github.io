@@ -1,0 +1,4 @@
+# degree | school | detail | advisor (detail and advisor optional)
+Ph.D. in Software Engineering (expected 2027) | University of California, Irvine | Dissertation: "User-driven Accessibility Testing with Large Language Models." | Prof. Sam Malek
+M.S. in Software Engineering, 2020 | University of Dhaka, Bangladesh | Thesis: "Sentiment Analysis in Software Engineering." | Prof. Kazi Muheymin-Us Sakib
+B.S. in Computer Science, 2018 | University of Dhaka, Bangladesh | |

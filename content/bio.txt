@@ -1,0 +1,3 @@
+I am a Ph.D. candidate in Software Engineering at UC Irvine, advised by Prof. Sam Malek. My work sits between software engineering and human-computer interaction. I build LLM-based approaches that put disabled people's experience at the center of accessibility testing, using AI to scale their insight rather than replace it.
+
+I combine empirical studies of practice, user studies with disabled testers, and evaluations of the LLM coding agents that increasingly write the software people use. My work has appeared at CHI, ICSE, FSE and ASE, including an ICSE 2025 Distinguished Paper Award. I expect to defend in Spring 2027.

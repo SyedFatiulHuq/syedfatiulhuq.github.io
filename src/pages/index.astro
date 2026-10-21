@@ -1,0 +1,124 @@
+---
+import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
+import {
+  paragraphs, text, list, education, threads, teaching, yearItems, publications,
+} from '../lib/content';
+
+const ME = 'S. F. Huq';
+const authorParts = (authors: string) => authors.split(ME);
+
+const linkLabel = (url: string) => (url.toLowerCase().endsWith('.pdf') ? 'PDF' : 'Page');
+---
+<Base>
+  <section id="about" aria-label="About">
+    <div class="hero">
+      <img class="photo" src={site.photo} alt={`Portrait of ${site.name}`} width="200" height="267" />
+      <div class="hero-text">
+        <h1>{site.name}</h1>
+        <p class="sub">{site.title}<br />{site.affiliation}</p>
+        <ul class="icons" aria-label="Contact and profiles">
+          <li>
+            <a href={`mailto:${site.email}`} aria-label={`Email ${site.email}`} title="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+            </a>
+          </li>
+          <li>
+            <a href={site.scholar} aria-label="Google Scholar profile" title="Google Scholar">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polygon points="12 3 1 9 12 15 23 9 12 3" /><path d="M5 11.5v5c0 1.5 3.1 3 7 3s7-1.5 7-3v-5" /><line x1="23" y1="9" x2="23" y2="15" /></svg>
+            </a>
+          </li>
+          <li>
+            <a href={site.linkedin} aria-label="LinkedIn profile" title="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg>
+            </a>
+          </li>
+        </ul>
+        <ul class="docs" aria-label="Documents (PDF)">
+          {site.documents.map((d) => (
+            <li><a class="btn" href={d.url}>{d.label} <span class="sr-only">(PDF)</span></a></li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    {paragraphs('bio.txt').map((p) => <p>{p}</p>)}
+    <p><strong>Interests:</strong> {list('interests.txt').join(' · ')}</p>
+
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul class="plain">
+      {education().map((e) => (
+        <li>
+          <strong>{e.degree}</strong>, {e.school}
+          {e.detail && <div class="muted">{e.detail}</div>}
+          {e.advisor && <div class="muted">Advisor: {e.advisor}</div>}
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+    <p>{text('research-intro.txt')}</p>
+    <ul class="plain">
+      {threads().map((t) => (
+        <li><strong>{t.title}.</strong> {t.text}</li>
+      ))}
+    </ul>
+    <p><a href="/research-statement.pdf">Read the full research statement (PDF)</a></p>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <p>Citation counts and the full list are on <a href={site.scholar}>my Google Scholar profile</a>.</p>
+    {publications().map((g) => (
+      <>
+        <h3>{g.group}</h3>
+        <ul class="plain">
+          {g.items.map((p) => (
+            <li class={p.featured ? 'featured' : undefined}>
+              {p.featured && <span class="sr-only">Selected paper. </span>}
+              {authorParts(p.authors).map((part, i) => (<>{i > 0 && <strong>{ME}</strong>}{part}</>))}. “{p.title}.” <strong>{p.venue}</strong>.
+              {p.note && <span class="tag award">{p.note}</span>}
+              {p.link && <a class="tag link" href={p.link} aria-label={`${linkLabel(p.link)}: ${p.title}`}>{linkLabel(p.link)}</a>}
+            </li>
+          ))}
+        </ul>
+      </>
+    ))}
+  </section>
+
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <p>{text('teaching-intro.txt')}</p>
+    <ul class="plain">
+      {teaching().map((t) => (
+        <li>
+          <strong>{t.role}</strong>, {t.place} <span class="muted">({t.period})</span>
+          <div class="muted">{t.detail}</div>
+        </li>
+      ))}
+    </ul>
+    <p><a href="/teaching-statement.pdf">Read the full teaching statement (PDF)</a></p>
+  </section>
+
+  <section id="more">
+    <h2>Awards, Talks & Service</h2>
+    <h3>Awards</h3>
+    <ul class="plain compact">
+      {yearItems('awards.txt').map((a) => <li><span class="year">{a.year}</span>{a.text}</li>)}
+    </ul>
+    <h3>Talks</h3>
+    <ul class="plain compact">
+      {yearItems('talks.txt').map((a) => <li><span class="year">{a.year}</span>{a.text}</li>)}
+    </ul>
+    <h3>Service</h3>
+    <ul class="plain compact">
+      {list('service.txt').map((s) => <li>{s}</li>)}
+    </ul>
+  </section>
+
+</Base>

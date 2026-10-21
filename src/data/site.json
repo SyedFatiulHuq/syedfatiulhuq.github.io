@@ -1,0 +1,16 @@
+{
+  "name": "Syed Fatiul Huq",
+  "title": "Ph.D. Candidate in Software Engineering",
+  "affiliation": "University of California, Irvine",
+  "location": "Irvine, CA, USA",
+  "email": "fsyedhuq@uci.edu",
+  "scholar": "https://scholar.google.com/citations?user=J4GjvRUAAAAJ",
+  "linkedin": "https://www.linkedin.com/in/syedfhuq/",
+  "documents": [
+    { "label": "CV", "url": "/cv.pdf" },
+    { "label": "Research Statement", "url": "/research-statement.pdf" },
+    { "label": "Teaching Statement", "url": "/teaching-statement.pdf" }
+  ],
+  "theme": "olive",
+  "photo": "/DSC_7794.JPG"
+}
