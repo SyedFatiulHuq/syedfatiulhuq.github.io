@@ -7,6 +7,7 @@
 *S. F. Huq, Z. He, Y. He, S. Malek | Bridging the Gap between Automated Intervention and Actual User Experience: A Mixed-Methods Study on Mobile Accessibility Issues for Screen Reader Users | CHI 2026 | | https://seal.ics.uci.edu/publications/2026_CHI.pdf
 *S. F. Huq, M. Tafreshipour, K. Kalcevich, S. Malek | Automated generation of accessibility test reports from recorded user transcripts | ICSE 2025 | Distinguished Paper Award | https://seal.ics.uci.edu/publications/2025_ICSE_reca11.pdf
 *S. F. Huq, A. Alshayban, Z. He, S. Malek | #A11ydev: Understanding contemporary software accessibility practices from Twitter conversations | CHI 2023 | | https://seal.ics.uci.edu/projects/a11ydev/a11ydev.pdf
+Z. He, S. F. Huq, Y. He, H. Dam, S. Malek | From Reports to Resolutions: Accessibility in Practice Through Moodle’s Issue Tracker | ASSETS 2026 | | https://dl.acm.org/doi/10.1145/3797867.3829062
 Y. He, Z. He, S. F. Huq, S. Malek | ReFLAIR: Detecting Responsive Layout Reflow Issues using Multimodal Generative AI | FSE 2026 | | https://seal.ics.uci.edu/publications/2026_FSE.pdf
 S. Jain, S. F. Huq, Z. He, S. Malek | Automated Detection of Web Application Navigation Barriers for Screen Reader Users | ASE 2025 | | https://seal.ics.uci.edu/publications/2025_ASE.pdf
 Z. He, S. F. Huq, S. Malek | Enhancing web accessibility: Automated detection of issues with generative AI | FSE 2025 | | https://seal.ics.uci.edu/publications/2025_FSE_GenA11y.pdf
