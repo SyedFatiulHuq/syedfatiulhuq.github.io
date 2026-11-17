@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import { resolve } from 'node:path';
+import sitemap from '@astrojs/sitemap';
 
 // The text files in content/ are read with fs, so Vite doesn't know about them.
 // Watch them and reload the browser when one changes.
@@ -16,5 +17,6 @@ const reloadOnContentChange = {
 
 export default defineConfig({
   site: 'https://syedfatiulhuq.github.io',
+  integrations: [sitemap()],
   vite: { plugins: [reloadOnContentChange] },
 });

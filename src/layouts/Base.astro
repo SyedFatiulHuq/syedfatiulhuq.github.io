@@ -1,13 +1,30 @@
 ---
 import site from '../data/site.json';
-const { title = site.name } = Astro.props;
+const { title = site.seoTitle } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: site.name,
+  jobTitle: site.title,
+  description: site.description,
+  url: canonical,
+  affiliation: { '@type': 'CollegeOrUniversity', name: site.affiliation },
+  sameAs: [site.scholar, site.linkedin],
+};
 ---
 <!doctype html>
 <html lang="en" data-theme={site.theme}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content={`${site.name}, ${site.title}, ${site.affiliation}`} />
+    <meta name="description" content={site.description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={site.description} />
+    <meta property="og:url" content={canonical} />
+    <script type="application/ld+json" set:html={JSON.stringify(person)} />
     <title>{title}</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
