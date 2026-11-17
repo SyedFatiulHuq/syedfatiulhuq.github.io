@@ -31,12 +31,12 @@ const { title = site.name } = Astro.props;
 <style is:global>
   :root {
     --bg: #fdfdfc; --fg: #1d1d1f; --muted: #5f6368; --rule: #e3e3e0;
-    --accent: #556b2f; --accent-soft: #f1f4e8;
+    --accent: #556b2f; --accent-soft: #f1f4e8; --accent-bright: #7fb02a; --accent-glow: #e3efc9;
   }
   /* Accent presets: set "theme" in src/data/site.json. All pass 4.5:1 contrast on --bg. */
-  :root[data-theme="olive"] { --accent: #556b2f; --accent-soft: #f1f4e8; }
-  :root[data-theme="sage"]  { --accent: #4f6f52; --accent-soft: #eef3ee; }
-  :root[data-theme="blue"]  { --accent: #1a5fb4; --accent-soft: #eef3fb; }
+  :root[data-theme="olive"] { --accent: #556b2f; --accent-soft: #f1f4e8; --accent-bright: #7fb02a; --accent-glow: #e3efc9; }
+  :root[data-theme="sage"]  { --accent: #4f6f52; --accent-soft: #eef3ee; --accent-bright: #5fae6b; --accent-glow: #dcefde; }
+  :root[data-theme="blue"]  { --accent: #1a5fb4; --accent-soft: #eef3fb; --accent-bright: #3d8be0; --accent-glow: #dbe9fa; }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; scroll-padding-top: 4rem; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
@@ -64,6 +64,7 @@ const { title = site.name } = Astro.props;
   .muted, .sub { color: var(--muted); }
   .sub { margin: 0 0 1rem; }
 
+  .pill { margin: 1.1rem 0 0; font: italic 700 1rem system-ui, sans-serif; color: #946200; }
   .hero { display: flex; gap: 1.75rem; align-items: center; }
   .photo { width: 200px; height: 267px; object-fit: cover; border-radius: 8px; flex: none; }
   .hero-text { min-width: 0; }

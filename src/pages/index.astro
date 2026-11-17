@@ -39,6 +39,7 @@ const linkLabel = (url: string) => (url.toLowerCase().endsWith('.pdf') ? 'PDF' :
             <li><a class="btn" href={d.url} target="_blank" rel="noopener noreferrer">{d.label} <span class="sr-only">(PDF, opens in new tab)</span></a></li>
           ))}
         </ul>
+        {site.jobMarket && <p class="pill">{site.jobMarket}</p>}
       </div>
     </div>
 
